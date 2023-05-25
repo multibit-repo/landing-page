@@ -25,7 +25,7 @@ function App(props: MyAppProps) {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <meta
           name="description"
-          content="MultiBit breaks down the barrier between the BTC and EVm chains, allowing you to easily transfer assets and conduct transactions between popular blockchains. Let’s embrace the future of blockchain with our cutting-edge cross-chain bridge solution."
+          content="MultiBit breaks down the barrier between the BTC and EVM chains, allowing you to easily transfer assets and conduct transactions between popular blockchains. Let’s embrace the future of blockchain with our cutting-edge cross-chain bridge solution."
         />
         <meta name="keywords" content="MultiBit,MultiBit Bridge,BRC20 Bridge" />
       </Head>
