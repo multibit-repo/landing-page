@@ -1,0 +1,72 @@
+{
+  "name": "hepu",
+  "author": "pipi@hepu",
+  "version": "1.0.0",
+  "private": true,
+  "license": "",
+  "scripts": {
+    "dev": "next",
+    "turbo": "next dev --turbo",
+    "build": "next build",
+    "export": "next export",
+    "build:stage": "next build",
+    "export:stage": "next export",
+    "start": "next start",
+    "prepare": "husky install",
+    "prettier": "prettier -c --write \"**/*\"",
+    "lint": "eslint ./src/**/*.{ts,tsx}",
+    "serve": "pm2 start npm --name 'bounce_web' -- run start"
+  },
+  "lint-staged": {
+    "./src/**/*.{ts,js,jsx,tsx}": [
+      "eslint --ignore-path .gitignore --fix",
+      "prettier --ignore-path .gitignore --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/server": "^11.10.0",
+    "@emotion/styled": "^11.10.4",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.10.8",
+    "env-cmd": "^10.1.0",
+    "next": "latest",
+    "nextjs-progressbar": "^0.0.14",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-toastify": "^9.1.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@next/eslint-plugin-next": "^12.3.1",
+    "@svgr/webpack": "^6.5.1",
+    "@types/node": "^14.6.0",
+    "@types/react": "^18.0.8",
+    "@types/react-copy-to-clipboard": "^5.0.2",
+    "@types/react-dom": "^18.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "babel-plugin-import": "^1.13.5",
+    "babel-plugin-inline-react-svg": "^2.0.1",
+    "eslint": "^8.14.0",
+    "eslint-config-next": "latest",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.4.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.2",
+    "npm-force-resolutions": "^0.0.10",
+    "prettier": "^2.6.2",
+    "typescript": "^4.8.4",
+    "url-loader": "^4.1.1"
+  }
+}
